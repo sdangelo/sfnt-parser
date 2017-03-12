@@ -204,7 +204,7 @@ function parseCharset(SFNTParser, strings, charset, isCID, nGlyphs, data) {
 		o += 1;
 		while (count != 0) {
 			var first = SFNTParser.toUSHORT(data.slice(o, o + 2));
-			var left = data[o + 3];
+			var left = data[o + 2];
 			for (var j = 0; j <= left; j++) {
 				ret.glyphs[i] = f(first + j);
 				i++;
